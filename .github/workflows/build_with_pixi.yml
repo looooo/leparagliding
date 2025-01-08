@@ -17,4 +17,13 @@ jobs:
     - uses: prefix-dev/setup-pixi@v0.8.1
       with:
         pixi-version: v0.39.5
+        cache: true
     - run: pixi run build
+
+    - uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: leparagliding*
+        tag: main
+        overwrite: true
+        file_glob: true
