@@ -1,0 +1,16 @@
+[project]
+authors = ["looooo <sppedflyer@gmail.com>"]
+channels = ["conda-forge"]
+description = "paragliding design software written in fortran"
+name = "leparagliding"
+platforms = ["linux-64", "linux-aarch64", "osx-64", "osx-arm64", "win-64"]
+version = "3.25"
+
+[tasks]
+build = {cmd = ["mkdir", "-p", "build", "&&",
+				"cd", "build", "&&", 
+				"$FC", "../leparagliding.f", "-o", "leparagliding"]}
+install = {cmd = ["cp", "leparagliding", "$CONDA_PREFIX/bin/"]}
+
+[dependencies]
+compilers = ">=1.8.0,<2"
