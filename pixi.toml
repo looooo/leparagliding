@@ -8,19 +8,19 @@ version = "3.25"
 
 [target.linux-64.tasks]
 build = {cmd = ["$FC", "leparagliding.f", "-o", "leparagliding_linux_64"]}
-install = {cmd = ["cp", "leparagliding", "$CONDA_PREFIX/bin/"], depends-on = ["build"]}
+install = {cmd = ["cp", "leparagliding_linux_64", "$CONDA_PREFIX/bin/leparagliding"], depends-on = ["build"]}
 
 [target.linux-aarch64.tasks]
 build = {cmd = ["$FC", "leparagliding.f", "-o", "leparagliding_linux_aarch64"]}
-install = {cmd = ["cp", "leparagliding", "$CONDA_PREFIX/bin/"], depends-on = ["build"]}
+install = {cmd = ["cp", "leparagliding_linux_aarch64", "$CONDA_PREFIX/bin/leparagliding"], depends-on = ["build"]}
 
 [target.osx-64.tasks]
 build = {cmd = ["$FC", "leparagliding.f", "-o", "leparagliding_osx_64"]}
-install = {cmd = ["cp", "leparagliding", "$CONDA_PREFIX/bin/"], depends-on = ["build"]}
+install = {cmd = ["cp", "leparagliding_osx_64", "$CONDA_PREFIX/bin/leparagliding"], depends-on = ["build"]}
 
 [target.osx-arm64.tasks]
 build = {cmd = ["$FC", "leparagliding.f", "-o", "leparagliding_osx_arm64"]}
-install = {cmd = ["cp", "leparagliding", "$CONDA_PREFIX/bin/"], depends-on = ["build"]}
+install = {cmd = ["cp", "leparagliding_osx_arm64", "$CONDA_PREFIX/bin/leparagliding"], depends-on = ["build"]}
 
 [target.win-64.tasks]
 build = {cmd = ["$FC", "leparagliding.f", "-o", "leparagliding.exe"]}
