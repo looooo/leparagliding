@@ -23,7 +23,7 @@ build = {cmd = ["$FC", "leparagliding.f", "-o", "leparagliding"]}
 install = {cmd = ["cp", "leparagliding", "$CONDA_PREFIX/bin/"], depends-on = ["build"]}
 
 [target.win-64.tasks]
-build = {cmd = ["echo $FC", "&&", "$FC", "leparagliding.f", "-o", "leparagliding.exe"]}
+build = {cmd = ["$FC", "leparagliding.f", "-o", "leparagliding.exe"]}
 install = {cmd = ["copy", "leparagliding.exe", "%CONDA_PREFIX%\\bin\\"], depends-on = ["build"]}
 
 [dependencies]
