@@ -14,7 +14,7 @@ build = {cmd = ["$FC", "leparagliding.f", "-o", "leparagliding_linux_64"]}
 install = {cmd = ["cp", "leparagliding_linux_64", "$CONDA_PREFIX/bin/leparagliding"], depends-on = ["build"]}
 
 [feature.cross.target.linux-64.tasks]
-build = {cmd = ["$FC", "leparagliding.f", "-o", "leparagliding_linux_aarch64"]}
+cross_build = {cmd = ["$FC", "leparagliding.f", "-o", "leparagliding_linux_aarch64"]}
 
 [target.linux-aarch64.tasks]
 build = {cmd = ["$FC", "leparagliding.f", "-o", "leparagliding_linux_aarch64"]}
