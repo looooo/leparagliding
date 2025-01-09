@@ -19,6 +19,8 @@ jobs:
         pixi-version: v0.39.5
         cache: true
     - run: pixi run build
+    - if: matrix.os == 'ubuntu-latest'
+      run: pixi run -e cross build
 
     - uses: svenstaro/upload-release-action@v2
       with:
